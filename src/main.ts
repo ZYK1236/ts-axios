@@ -1,4 +1,7 @@
-// Import here Polyfills if needed. Recommended core-js (npm i -D core-js)
-// import "core-js/fn/array.find"
-// ...
-export default class DummyClass {}
+import { AxiosConfigInterface } from './types/index'
+import xhr from './xhr'
+function axios(config: AxiosConfigInterface): void {
+  xhr(config)
+}
+
+export default axios
